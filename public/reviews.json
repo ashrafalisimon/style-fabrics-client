@@ -1,0 +1,30 @@
+[
+    {
+        "_id": 1,
+        "name": "Michal Wincent",
+        "customer": "Customer",
+        "description":
+          "Fablio's customer service is great. I was searching & found exactly what I wanted, was delivered quickly. Very good transaction. Fast shipping. Great blankets fabric and I am planning to buy it in bulk order.",
+        "img": "https://i.ibb.co/nRFRJch/03-2.jpg"
+
+    },
+    {
+        "_id": 2,
+        "name": "Elic Semules",
+        "customer": "Customer",
+        "description":
+          "The culture is the best at Fablio. You can tell that they truly care about the happiness of their employees. It's a really relaxed and calm environment and their quality of product is always best. I refer them for the future.",
+        "img": "https://i.ibb.co/t2DRLLL/02-2.jpg"
+
+    },
+    {
+        "_id": 3,
+        "name": "Alex Albert Belle",
+        "customer": "Customer",
+        "description":
+          "I realized after I sent in my order that I had ordered a larger quantity than I needed. I emailed and received a quick response, adjustment to my order and a refund. Product was shipped out  in a timely manner. FABLIO is great!",
+        "img": "https://i.ibb.co/TbhRNHp/01-2.jpg"
+
+    }
+    
+]
