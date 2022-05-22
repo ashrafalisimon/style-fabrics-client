@@ -37,7 +37,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to='/home' className="normal-case text-xl">Style Fabrics</Link>
+        <Link to='/home' className="normal-case text-primary text-xl">Style Fabrics</Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu  menu-horizontal p-0">
