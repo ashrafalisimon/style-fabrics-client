@@ -1,8 +1,34 @@
-import { CalculatorIcon, CalendarIcon, ShieldCheckIcon, ShoppingBagIcon } from '@heroicons/react/solid';
+import {CalendarIcon, ShieldCheckIcon, ShoppingBagIcon } from '@heroicons/react/solid';
 import React from 'react';
+import AnimationCount from 'react-count-animation/lib/AnimationCount';
 import summery from '../../img/summery.jpg';
 
 const BusinessSummary = () => {
+    const awards = {
+        start: 0,
+        count: 25,
+        duration: 2000,
+        decimals: 0,
+        useGroup: true,
+        animation: 'up',
+      };
+    const equipment = {
+        start: 0,
+        count: 800,
+        duration: 2000,
+        decimals: 0,
+        useGroup: true,
+        animation: 'up',
+      };
+    const years = {
+        start: 0,
+        count: 17,
+        duration: 2000,
+        decimals: 0,
+        useGroup: true,
+        animation: 'up',
+      };
+
     return (
         <section className='bg-neutral'>
             <div className='px-4 md:px-28 py-16 flex flex-col md:flex-row space-x-4'>
@@ -14,21 +40,21 @@ const BusinessSummary = () => {
                         <div className='flex items-center space-x-3'>
                             <ShieldCheckIcon className='w-12 h-12 text-white'></ShieldCheckIcon>
                             <div className='text-white text-center'>
-                                <h4 className='md:text-3xl text-2xl  font-medium'>25 + </h4>
+                                <h4 className='md:text-3xl text-2xl  font-medium flex justify-center'> <AnimationCount {...awards}/> + </h4>
                                 <p className='text-xs md:text-lg'>Win Awards</p>
                             </div>
                         </div>
                         <div className='flex items-center space-x-3'>
                             <ShoppingBagIcon className='w-12 h-12 text-white'></ShoppingBagIcon>
                             <div className='text-white text-center'>
-                                <h4 className='md:text-3xl text-2xl  font-medium'> 800 + </h4>
+                            <h4 className='md:text-3xl text-2xl  font-medium flex justify-center'> <AnimationCount {...equipment}/> + </h4>
                                 <p className='text-xs md:text-lg'>Equipment</p>
                             </div>
                         </div>
                         <div className='flex items-center space-x-3'>
                             <CalendarIcon className='w-12 h-12 text-white'></CalendarIcon>
                             <div className='text-white text-center'>
-                                <h4 className='md:text-3xl text-2xl  font-medium'>17 + </h4>
+                            <h4 className='md:text-3xl text-2xl  font-medium flex justify-center'> <AnimationCount {...years}/> + </h4>
                                 <p className='text-xs md:text-lg'>Total Years</p>
                             </div>
                         </div>

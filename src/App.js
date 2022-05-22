@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import 'react-count-animation/dist/count.min.css';
 import Home from "./pages/Home/Home";
 import Products from "./pages/Product/Products";
 import Footer from "./pages/Shared/Footer";
