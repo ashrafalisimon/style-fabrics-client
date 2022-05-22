@@ -1,0 +1,79 @@
+[
+    {
+        "_id": 1,
+        "price": 7,
+        "productName":"Women white Velvet Finish Blouson Top",
+        "img":"https://i.ibb.co/31kcdXB/Product01.jpg",
+        "description":"This white velvet top with intricate work on neck  is perfect for partying with friends or family. By simply pairing it with a white jeans you're good to go. Minimal, breathable, and modest at the same time. ",
+        "minimumQuantity":500,
+        "availableQuantity":3500,
+        "size":["L", "M", "XL", "XXL"]
+
+    },
+    {
+        "_id": 2,
+        "price": 9,
+        "productName":"Women Blue Printed Shirt Style Top",
+        "img":"https://i.ibb.co/Xkgp67c/Product02.jpg",
+        "description":"Kick your personal style up a notch with this high-fashion long-sleeve top by Oxolloxo. This navy blue top is a great addition to your cool-weather wardrobe and looks great with your favourite pair of jeans for a laid-back lunch date look.",
+        "minimumQuantity":700,
+        "availableQuantity":4200,
+        "size":["L", "M", "XL"]
+
+    },
+    {
+        "_id": 3,
+        "price": 6,
+        "productName":"Women Square-Neck Top",
+        "img":"https://i.ibb.co/2y1rBsm/Product03.jpg",
+        "description":"style fabrics brings fashion-forward power dressing to today’s multi-faceted professional’s wardrobe. style fabrics represents sophisticated elegance that reflects today’s expression of style. Breaking the norms of conventional nine-to-five dressing, the brand’s range of garments focus on self-expression and individualism.  style fabrics has successfully defined the way women and men dress for the corporate world.",
+        "minimumQuantity":850,
+        "availableQuantity":5650,
+        "size":["L", "M"]
+
+    },
+    {
+        "_id": 4,
+        "price": 11,
+        "productName":"Men White Top",
+        "img":"https://i.ibb.co/Ky8tVNV/Product04.jpg",
+        "description":"Tommy Hilfiger oxford men's button down shirt adds a stylish sophistication to your polished casual look. Button-down collar. Button-down front closure. Long sleeves. Embroidered logo flag at chest.",
+        "minimumQuantity":250,
+        "availableQuantity":1600,
+        "size":["L", "M", "XL"]
+
+    },
+    {
+        "_id": 5,
+        "price": 7,
+        "productName":"Women White & Black Solid Top ",
+        "img":"https://i.ibb.co/qjZY7P6/Product05.jpg",
+        "description":"Black & White solid woven smocked back high low top with pleated detail, has a mandarin collar, long puff sleeves, and button closure and high low hem",
+        "minimumQuantity":200,
+        "availableQuantity":1500,
+        "size":["L", "M", "XL"]
+
+    },
+    {
+        "_id": 6,
+        "price": 10,
+        "productName":"Men's Regular-Fit Long-Sleeve Shirt ",
+        "img":"https://i.ibb.co/Jm1WFhF/Product06.jpg",
+        "description":"This regular-fit oxford shirt features a button-down collar, patch chest pocket, and box-pleated back yoke and striped pattern throughout .We listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort ",
+        "minimumQuantity":500,
+        "availableQuantity":2500,
+        "size":["L", "M", "XL", "XXL"]
+
+    },
+    {
+        "_id": 7,
+        "price": 5,
+        "productName":"Men's Blue Top ",
+        "img":"https://i.ibb.co/Dk2WD9H/Product07.jpg",
+        "description":"Style Fabrics is focused on creating affordable, high-quality, and long-lasting everyday clothing you can rely on. Our line of men’s must-haves includes polo shirts, chino pants, classic-fit shorts, casual button-downs, and crew-neck tees. Our consistent sizing takes the guesswork out of shopping, and each piece is put to the test to maintain the highest standards in quality and comfort. ",
+        "minimumQuantity":400,
+        "availableQuantity":3200,
+        "size":["L", "M", "XL", "XXL"]
+
+    }
+]
