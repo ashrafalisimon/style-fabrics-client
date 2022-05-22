@@ -19,7 +19,7 @@ const HomeProducts = () => {
                 <div className="divider w-24 mx-auto"></div> 
                 <p>We care about the quality, not the quantity.</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-5 w-full mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center'>
                 {
                     products.slice(0,6).map(product => 
                         <HomeProductDetails 
