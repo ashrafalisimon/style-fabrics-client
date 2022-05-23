@@ -12,7 +12,7 @@ const ProductDetials = ({product,setItems}) => {
         size
       } = product;
     return (
-        <div className="card w-96 bg-base-100 my-4 shadow-xl">
+        <div className="card max-w-lg bg-base-100 my-4 shadow-xl">
         <figure><img src={img} alt="" /></figure>
         <div className="card-body">
           <h5 className="card-title text-2xl">{productName}</h5>

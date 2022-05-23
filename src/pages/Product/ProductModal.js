@@ -59,7 +59,7 @@ const ProductModal = ({ items, setItems, refetch }) => {
             <div className="text-center">
               <p className="text-2xl font-bold text-neutral">
                 $
-                <span className="text-secondary text-5xl font-bold">
+                <span className="text-secondary text-4xl font-bold">
                   {price}
                 </span>
                 /per pice
@@ -78,7 +78,7 @@ const ProductModal = ({ items, setItems, refetch }) => {
               </label>
             </div>
           </div>
-          <form onSubmit={handleOrderNow} className="space-y-2 mt-8">
+          <form onSubmit={handleOrderNow} className="space-y-2 mt-4">
             <input
               type="number"
               name="quantity"

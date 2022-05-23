@@ -4,7 +4,7 @@ import { BadgeCheckIcon } from '@heroicons/react/solid';
 
 const WeAre = () => {
     return (
-        <div className='p-4 md:px-28 md:pt-16 flex flex-col md:flex-row justify-between items-center'>
+        <div className='p-4 md:px-28 md:pt-16 flex flex-col md:flex-row justify-between items-center md:space-x-12'>
             <div className='w-full md:w-1/2'>
                 <img src={WeAreImg} alt="" />
             </div>
