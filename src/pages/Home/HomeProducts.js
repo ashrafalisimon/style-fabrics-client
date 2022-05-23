@@ -7,7 +7,7 @@ import HomeProductDetails from './HomeProductDetails';
 
 const HomeProducts = () => {
     const {data:products, isLoading}= useQuery(['products'],
-    ()=>fetch('products.json').then(res=>res.json()));
+    ()=>fetch('http://localhost:5000/product').then(res=>res.json()));
 
     if(isLoading){
         return <Loading/>
@@ -21,7 +21,7 @@ const HomeProducts = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center'>
                 {
-                    products.slice(0,6).map(product => 
+                    products.slice(0,3).map(product => 
                         <HomeProductDetails 
                         key={product._id}
                         product={product}

@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import Loading from "../Shared/Loading";
 import ProductDetials from "./ProductDetials";
 import PoductBanner from "../../img/slider-mainbg-001.jpg";
+import ProductModal from "./ProductModal";
 
 const AllProduct = () => {
-  const { data: products, isLoading } = useQuery(["products"], () =>
-    fetch("products.json").then((res) => res.json())
+    const [items, setItems] = useState(null);
+    
+  const { data: products, isLoading, refetch } = useQuery(["products"], () =>
+    fetch("http://localhost:5000/product").then((res) => res.json())
   );
 
   if (isLoading) {
@@ -31,12 +34,18 @@ const AllProduct = () => {
             <ProductDetials
               key={product._id}
               product={product}
+              setItems={setItems}
             ></ProductDetials>
           ))}
         </div>
       </div>
-
-      <div></div>
+      {
+          items && <ProductModal 
+          items={items}
+          setItems={setItems}
+          refetch={refetch}
+          ></ProductModal>
+      }
     </div>
   );
 };
