@@ -29,7 +29,7 @@ const HomeProducts = () => {
                 }
             </div>
             <div className='flex items-center justify-center mt-8'>
-            <Link to='/products' className="btn  border-0 bg-neutral hover:bg-secondary hover:text-neutral px-16 duration-500 ease-in-out text-white font-bold">See All <ArrowRightIcon className='h-6 w-6 ml-2'/> </Link>
+            <Link to='/purchase' className="btn  border-0 bg-neutral hover:bg-secondary hover:text-neutral px-16 duration-500 ease-in-out text-white font-bold">See All <ArrowRightIcon className='h-6 w-6 ml-2'/> </Link>
             </div>
         </div>
     );

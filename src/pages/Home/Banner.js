@@ -12,7 +12,7 @@ const Banner = () => {
           <p className=" text-white">
           Since more than 17 years, Style Fabrics is operating in the textile market manufacture and trader. As years go by, the range of produced. 
           </p>
-          <Link to='/products' className="btn  bg-gradient-to-r from-primary to-accent px-8 text-white font-bold">See All Product</Link>
+          <Link to='/purchase' className="btn  bg-gradient-to-r from-primary to-accent px-8 text-white font-bold">Get Started</Link>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
     const menuItems= <>
         <li><NavLink activeClassName="bg-primary" to='/home'>Home</NavLink></li>
-        <li><NavLink activeClassName="bg-primary" to='/products'>Products</NavLink></li>
+        <li><NavLink activeClassName="bg-primary" to='/purchase'>Product Purchase</NavLink></li>
         <li><NavLink activeClassName="bg-primary" to='/myPortfolio'>My Portfolio</NavLink></li>
         <li><NavLink activeClassName="bg-primary" to='/blogs'>Blogs</NavLink></li>
         <li><NavLink activeClassName="bg-primary" to='/login'>Login</NavLink></li>
