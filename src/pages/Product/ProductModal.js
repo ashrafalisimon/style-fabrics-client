@@ -4,15 +4,13 @@ import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const ProductModal = ({ items, setItems, refetch }) => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const {
+    _id,
     price,
     productName,
-    img,
-    description,
     minimumQuantity,
     availableQuantity,
-    size,
   } = items;
   const [quantity,setQuantity] =useState(minimumQuantity);
   const handleIncrement =()=>{
@@ -38,10 +36,40 @@ const ProductModal = ({ items, setItems, refetch }) => {
   const handleOrderForm = (event) => {
     event.preventDefault();
     const myQuantity = event.target.quantity.value;
-    console.log(myQuantity);
-    refetch();
-    setItems(null);
-  };
+    const productPrice = myQuantity*price;
+
+    const productOrder = {
+      productId: _id,
+      productName: productName,
+      quantity: myQuantity,
+      price: productPrice,
+      user: user.email,
+      userName: user.displayName,
+      phone: event.target.phone.value,
+      address: event.target.address.value,
+      customDetails: event.target.customDetails.value
+    }
+    console.log(productOrder);
+  
+    fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(productOrder)
+        })
+            .then(res => res.json())
+            .then(data => {
+              console.log(data);
+              if(data){
+                toast(`Order is set, ${productName} at ${myQuantity}`)
+            }
+              refetch();
+              setItems(null);
+            });
+
+
+  }
 
   return (
     <div>
