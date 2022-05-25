@@ -5,6 +5,7 @@ import Loading from "../Shared/Loading";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
+import useToken from "../../hook/useToken";
 
 const SingUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -18,13 +19,13 @@ const SingUp = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     let signInError;
     const navigate = useNavigate()
-    // const [token] = useToken(user||gUser);
+    const [token] = useToken(user||gUser);
   
     if (loading || gLoading || updating) {
       return <Loading />;
     }
-    if (user||gUser) {
-        console.log(user);
+    if (token) {
+        // console.log(user);
         // console.log(gUser.user.photoURL);
       navigate('/purchase');
     }

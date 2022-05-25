@@ -5,20 +5,51 @@ import { Link, NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Navbar = () => {
-
   const [user] = useAuthState(auth);
 
   const logout = () => {
-      signOut(auth);
+    signOut(auth);
+    localStorage.removeItem('accessToken');
   };
 
-    const menuItems= <>
-        <li><NavLink activeClassName="bg-primary" to='/home'>Home</NavLink></li>
-        <li><NavLink activeClassName="bg-primary" to='/purchase'>Product Purchase</NavLink></li>
-        <li><NavLink activeClassName="bg-primary" to='/myPortfolio'>My Portfolio</NavLink></li>
-        <li><NavLink activeClassName="bg-primary" to='/blogs'>Blogs</NavLink></li>
-        <li>{user ? <button onClick={logout} className="btn btn-outline btn-secondary">Log Out</button> : <NavLink activeClassName="bg-primary" to='/login'>Login</NavLink>}</li>
+  const menuItems = (
+    <>
+      <li>
+        <NavLink activeClassName="bg-primary" to="/home">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName="bg-primary" to="/purchase">
+          Product Purchase
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName="bg-primary" to="/myPortfolio">
+          My Portfolio
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName="bg-primary" to="/blogs">
+          Blogs
+        </NavLink>
+      </li>
+      {
+        user && <li><NavLink activeClassName="bg-primary" to='/dashboard'>Dashboard</NavLink></li>
+      }
+      <li>
+        {user ? (
+          <button onClick={logout} className=" mx-2 btn btn-outline btn-secondary">
+            Log Out
+          </button>
+        ) : (
+          <NavLink activeClassName="bg-primary" to="/login">
+            Login
+          </NavLink>
+        )}
+      </li>
     </>
+  );
 
   return (
     <div className="navbar bg-neutral text-white lg:px-28 sticky top-0 z-40 shadow-xl">
@@ -47,21 +78,30 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to='/home' className="normal-case text-primary text-xl">Style Fabrics</Link>
+        <Link to="/home" className="normal-case text-primary text-xl">
+          Style Fabrics
+        </Link>
       </div>
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu  menu-horizontal p-0">
-          {menuItems}
-        </ul>
-        {
-          user && <div className="avatar ml-4">
-          <div className="w-12 rounded-full">
-            <img src={user?.photoURL} />
-          </div>
+      <div className="navbar-end">
+        <label
+          htmlFor="my-drawer-2"
+          className="btn btn-secondary text-white drawer-button lg:hidden"
+        >
+          Dashboard
+        </label>
+
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu  menu-horizontal p-0">{menuItems}</ul>
+          {user && (
+            <div className="avatar ml-4">
+              <div className="w-12 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
+          )}
         </div>
-        }
+
       </div>
-          
     </div>
   );
 };
