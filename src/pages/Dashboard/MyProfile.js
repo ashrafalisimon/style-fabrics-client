@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
@@ -12,7 +14,16 @@ const MyProfile = () => {
         handleSubmit,
         reset 
       } = useForm();
+      const [useInfo, setUseInfo] =useState({})
 
+        useEffect(()=>{
+          fetch(`http://localhost:5000/user/${user?.email}`)
+          .then(res=>res.json())
+          .then(result => {
+            console.log(result);
+            setUseInfo(result)
+          })
+        }, [])
 
       const onSubmit = async (data) => {
             const email =user.email
@@ -24,7 +35,6 @@ const MyProfile = () => {
                         phone: data.phone,
                         linkend: data.linkend,
                     }
-
                     if(email){
                         fetch(`http://localhost:5000/user/${email}`, {
                             method:'PUT',
@@ -35,23 +45,24 @@ const MyProfile = () => {
                         })
                         .then(res=>res.json())
                         .then(data => {
+                            console.log(data)
                             toast.success('Review added successfully')
                             reset();
                         })
                     }
         
       };
-
     return (
         <div className='text-center'>
             <h4 className='font-bold text-xl py-4'>My Profile Details</h4>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 place-items-start'>
                 <p><span className='font-bold'>Account Name:</span> {user.displayName}</p>
                 <p className='font-medium'><span className='font-bold'>Email</span>: {user.email}</p>
-                <p><span className='font-bold'>Education</span>:{}</p>
-                <p><span className='font-bold'>Address</span>:{}</p>
-                <p><span className='font-bold'>Phone</span>:{}</p>
-                <p><span className='font-bold'>Linkend</span>:{}</p>
+                <p><span className='font-bold'>Education</span>:{useInfo.education
+}</p>
+                <p><span className='font-bold'>Address</span>:{useInfo.address}</p>
+                <p><span className='font-bold'>Phone</span>:{useInfo.phone}</p>
+                <p><span className='font-bold'>Linkend</span>:{useInfo.linkend}</p>
             </div>
             <div class="divider"></div> 
             <h4 className='font-bold text-xl py-2'>My Profile Update</h4>
