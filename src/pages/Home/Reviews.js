@@ -6,7 +6,7 @@ import reviewBg from '../../img/reviewbg.jpg';
 
 const Reviews = () => {
   const { data: reviews, isLoading } = useQuery(["rewiews"], () =>
-    fetch("reviews.json").then((res) => res.json())
+    fetch("http://localhost:5000/review").then((res) => res.json())
   );
 
   if (isLoading) {
@@ -27,7 +27,7 @@ const Reviews = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 place-items-center">
           {reviews.map((review) => (
             <Review key={review._id} review={review}></Review>
-          ))}
+          )).reverse().slice(0,3)}
         </div>
       </div>
     </section>

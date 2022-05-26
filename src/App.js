@@ -16,6 +16,7 @@ import AddReview from "./pages/Dashboard/userRole/AddReview";
 import MyOrder from "./pages/Dashboard/userRole/MyOrder";
 import Users from "./pages/Dashboard/Admin/Users";
 import RequireAdmin from "./pages/Login/RequireAdmin";
+import NotFound from "./pages/Shared/NotFound";
 
 function App() {
   return <>
@@ -39,6 +40,7 @@ function App() {
 
       <Route path="/login" element={<Login/>} />
       <Route path="/singUp" element={<SingUp/>} />
+      <Route path="*" element={<NotFound/>}/>
     </Routes>
     <Footer/>
 

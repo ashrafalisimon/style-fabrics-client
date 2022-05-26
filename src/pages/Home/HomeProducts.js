@@ -21,11 +21,11 @@ const HomeProducts = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center'>
                 {
-                    products.slice(0,3).map(product => 
+                    products.map(product => 
                         <HomeProductDetails 
                         key={product._id}
                         product={product}
-                        ></HomeProductDetails> )
+                        ></HomeProductDetails> ).reverse().slice(0,6)
                 }
             </div>
             <div className='flex items-center justify-center mt-8'>
