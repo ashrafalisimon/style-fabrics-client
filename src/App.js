@@ -20,6 +20,8 @@ import NotFound from "./pages/Shared/NotFound";
 import ManageAllOrder from "./pages/Dashboard/Admin/ManageAllOrder";
 import AddProduct from "./pages/Dashboard/Admin/AddProduct";
 import ManageProduct from "./pages/Dashboard/Admin/ManageProduct";
+import Blog from "./pages/Blog/Blog";
+import Protfolio from "./pages/MyPortfolio/Protfolio";
 
 function App() {
   return <>
@@ -44,6 +46,8 @@ function App() {
   
         </Route>
 
+      <Route path="/myPortfolio" element={<Protfolio/>} />
+      <Route path="/blog" element={<Blog/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/singUp" element={<SingUp/>} />
       <Route path="*" element={<NotFound/>}/>
