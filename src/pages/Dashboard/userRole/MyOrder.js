@@ -32,6 +32,22 @@ const MyOrder = () => {
     }
   }, []);
 
+  const handleDelete = id =>{
+    const proceed = window.confirm('Are you sure?');
+    if(proceed){
+        const url = `http://localhost:5000/order/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            const remaining = orders.filter(service => service._id !== id);
+            setOrders(remaining);
+        })
+    }
+}
+
   return (
     <div className="w-full">
       <h4 className="text-center py-4">My All Order {orders.length}</h4>
@@ -77,7 +93,7 @@ const MyOrder = () => {
 
                 <td>
                   {
-                    order.paid ? '' : <span className="btn btn-xs btn-error">Cancel</span>
+                    order.paid ? '' : <span onClick={() => handleDelete(order._id)} className="btn btn-xs btn-error">Cancel</span>
                   }
                 </td>
 
