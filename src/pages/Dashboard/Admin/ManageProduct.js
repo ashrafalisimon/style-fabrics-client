@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Loading from "../../Shared/Loading";
 
 const ManageProduct = () => {
+  const [product, setProduct] = useState([]);
   const {
     data: products,
     isLoading,
@@ -14,6 +15,23 @@ const ManageProduct = () => {
   if (isLoading) {
     return <Loading />;
   }
+
+  const handleDelete = id =>{
+    const proceed = window.confirm('Are you sure?');
+    if(proceed){
+        const url = `http://localhost:5000/product/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            const remaining = product.filter(o => o._id !== id);
+            setProduct(remaining);
+        })
+    }
+}
+
 
   return (
     <div className="w-full px-8 space-y-3">
@@ -39,7 +57,8 @@ const ManageProduct = () => {
                         <td>{product.productName}</td>
                         <td>${product.price}</td>
                         <td>{product.availableQuantity} pics</td>
-                        <td><button className="btn btn-xs btn-error">Delete</button></td>
+                        <td><button onClick={() => handleDelete(product._id)}
+                         className="btn btn-xs btn-error">Delete</button></td>
                       </tr>
                         )
                 }
