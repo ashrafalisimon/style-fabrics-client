@@ -7,7 +7,7 @@ import HomeProductDetails from './HomeProductDetails';
 
 const HomeProducts = () => {
     const {data:products, isLoading}= useQuery(['products'],
-    ()=>fetch('http://localhost:5000/product').then(res=>res.json()));
+    ()=>fetch('https://young-plains-86754.herokuapp.com/product').then(res=>res.json()));
 
     if(isLoading){
         return <Loading/>

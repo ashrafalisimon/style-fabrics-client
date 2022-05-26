@@ -6,7 +6,7 @@ import reviewBg from '../../img/reviewbg.jpg';
 
 const Reviews = () => {
   const { data: reviews, isLoading } = useQuery(["rewiews"], () =>
-    fetch("http://localhost:5000/review").then((res) => res.json())
+    fetch("https://young-plains-86754.herokuapp.com/review").then((res) => res.json())
   );
 
   if (isLoading) {

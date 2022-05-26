@@ -17,7 +17,7 @@ const MyProfile = () => {
       const [useInfo, setUseInfo] =useState({})
 
         useEffect(()=>{
-          fetch(`http://localhost:5000/user/${user?.email}`)
+          fetch(`https://young-plains-86754.herokuapp.com/user/${user?.email}`)
           .then(res=>res.json())
           .then(result => {
             console.log(result);
@@ -36,7 +36,7 @@ const MyProfile = () => {
                         linkend: data.linkend,
                     }
                     if(email){
-                        fetch(`http://localhost:5000/user/${email}`, {
+                        fetch(`https://young-plains-86754.herokuapp.com/user/${email}`, {
                             method:'PUT',
                             headers: {
                                 'content-type': 'application/json'

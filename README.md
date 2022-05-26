@@ -1,3 +1,14 @@
+# Style Fabrics Project
+
+## [Live Site Link](https://style-fabrics-cd172.web.app/).
+
+* Manufacturer Website
+* Detailed information of the Manufacturer is given.
+* Can buy products. Be able to pay. Talk to us directly
+* You can hire him by going here and peeling up the form
+* Technologies use (TailwindCSS, React, NodeJs, MongoDb,Firebase, react hook Form, jwt, stripe desiyUI, etc.)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

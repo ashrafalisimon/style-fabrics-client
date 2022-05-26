@@ -9,7 +9,7 @@ const ManageAllOrder = () => {
         isLoading,
         refetch,
       } = useQuery(["products"], () =>
-        fetch("http://localhost:5000/allOrder").then((res) => res.json())
+        fetch("https://young-plains-86754.herokuapp.com/allOrder").then((res) => res.json())
       );
     
       if (isLoading) {

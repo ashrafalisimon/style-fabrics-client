@@ -10,7 +10,7 @@ const AllProduct = () => {
     const [items, setItems] = useState(null);
     
   const { data: products, isLoading, refetch } = useQuery(["products"], () =>
-    fetch("http://localhost:5000/available").then((res) => res.json())
+    fetch("https://young-plains-86754.herokuapp.com/available").then((res) => res.json())
   );
 
   if (isLoading) {

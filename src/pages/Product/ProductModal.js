@@ -51,7 +51,7 @@ const ProductModal = ({ items, setItems, refetch }) => {
     }
     console.log(productOrder);
   
-    fetch('http://localhost:5000/order', {
+    fetch('https://young-plains-86754.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -34,7 +34,7 @@ const AddReview = () => {
                         img: img
                     }
 
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://young-plains-86754.herokuapp.com/review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -9,7 +9,7 @@ const ManageProduct = () => {
     isLoading,
     refetch,
   } = useQuery(["products"], () =>
-    fetch("http://localhost:5000/available").then((res) => res.json())
+    fetch("https://young-plains-86754.herokuapp.com/available").then((res) => res.json())
   );
 
   if (isLoading) {
@@ -19,7 +19,7 @@ const ManageProduct = () => {
   const handleDelete = id =>{
     const proceed = window.confirm('Are you sure?');
     if(proceed){
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://young-plains-86754.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
