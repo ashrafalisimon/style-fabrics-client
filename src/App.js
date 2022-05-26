@@ -17,6 +17,9 @@ import MyOrder from "./pages/Dashboard/userRole/MyOrder";
 import Users from "./pages/Dashboard/Admin/Users";
 import RequireAdmin from "./pages/Login/RequireAdmin";
 import NotFound from "./pages/Shared/NotFound";
+import ManageAllOrder from "./pages/Dashboard/Admin/ManageAllOrder";
+import AddProduct from "./pages/Dashboard/Admin/AddProduct";
+import ManageProduct from "./pages/Dashboard/Admin/ManageProduct";
 
 function App() {
   return <>
@@ -35,6 +38,9 @@ function App() {
           <Route path="myOrder" element={<MyOrder/>}/>
           <Route path="addReview" element={<AddReview/>}/>
           <Route path="users" element={<RequireAdmin><Users/></RequireAdmin>}/>
+          <Route path="manageAllOrder" element={<RequireAdmin><ManageAllOrder/></RequireAdmin>}/>
+          <Route path="addProduct" element={<RequireAdmin><AddProduct/></RequireAdmin>}/>
+          <Route path="manageProduct" element={<RequireAdmin><ManageProduct/></RequireAdmin>}/>
   
         </Route>
 

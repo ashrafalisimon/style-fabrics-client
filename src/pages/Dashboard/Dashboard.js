@@ -26,22 +26,27 @@ const Dashboard = () => {
                 My Profile
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink activeClassName="bg-primary" to="/dashboard/myOrder">
-                My Order
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeClassName="bg-primary" to="/dashboard/addReview">
-                Add Review
-              </NavLink>
-            </li> */}
-
+    
             {admin ? (
               <>
                 <li>
                 <NavLink activeClassName="bg-primary" to="/dashboard/users">
                   All User
+                </NavLink>
+                </li>
+                <li>
+                <NavLink activeClassName="bg-primary" to="/dashboard/manageAllOrder">
+                  All Order
+                </NavLink>
+                </li>
+                <li>
+                <NavLink activeClassName="bg-primary" to="/dashboard/addProduct">
+                  Add Product
+                </NavLink>
+                </li>
+                <li>
+                <NavLink activeClassName="bg-primary" to="/dashboard/manageProduct">
+                  Manage Product
                 </NavLink>
                 </li>
               </>
