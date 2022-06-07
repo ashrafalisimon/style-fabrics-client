@@ -5,6 +5,7 @@
 * Manufacturer Website
 * Detailed information of the Manufacturer is given.
 * Can buy products. Be able to pay. Talk to us directly
+* Implemented for email-password (login-Register) based login, google    system & JWT security
 * You can hire him by going here and peeling up the form
 * Technologies use (TailwindCSS, React, NodeJs, MongoDb,Firebase, react hook Form, jwt, stripe desiyUI, etc.)
 
