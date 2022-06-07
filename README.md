@@ -3,7 +3,10 @@
 ## [Live Site Link](https://style-fabrics-cd172.web.app/).
 
 * Manufacturer Website
+* Responsive single page full stack website.
 * Detailed information of the Manufacturer is given.
+* Admin Panel is Developed for Products & Order Management. Payment
+gateway Stripe.
 * Can buy products. Be able to pay. Talk to us directly
 * Implemented for email-password (login-Register) based login, google    system & JWT security
 * You can hire him by going here and peeling up the form
